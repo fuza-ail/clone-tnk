@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loan-slider.component.scss']
 })
 export class LoanSliderComponent implements OnInit {
+  amount:number
 
   constructor() { }
 

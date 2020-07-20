@@ -1,0 +1,63 @@
+@import "../../../app.component.scss";
+
+.landing {
+  display: flex;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+
+  .landing__text {
+    max-width: 554px;
+    align-self: center;
+    .landing__text__title {
+      margin-bottom: 36px;
+      h1 {
+        line-height: 72px;
+        font-size: 48px;
+        font-weight: 700px;
+      }
+    }
+    .landing__text__subtitle {
+      margin-bottom: 36px;
+      p {
+        font-size: 20px;
+        max-width: 475px;
+        #SubtitleAmount {
+          font-weight: 1000;
+        }
+      }
+    }
+    .landing__text__footer {
+      margin-top: 270px;
+      display: flex;
+      align-items: center;
+      .landing__text__footer__text{
+        width: 270px;
+        p{
+          margin-bottom: 15px;
+          font-size: 12px;
+        }
+      }
+      .landing__text__footer__logo{
+        display: flex;
+        img{
+          margin:0 20px;
+        }
+      }
+    }
+  }
+  .landing__img{
+    width: 300px;
+    position: relative;
+    overflow:visible;
+    padding-top: 20px;
+    img{
+      position: relative;
+      right:50%;
+      z-index: -1;
+      transform: scaleX(-1);
+      opacity: 0.5;
+    }
+  }
+}

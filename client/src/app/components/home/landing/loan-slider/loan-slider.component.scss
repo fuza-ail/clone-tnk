@@ -1,0 +1,80 @@
+@import '../../../../app.component.scss';
+
+.loan-slider{
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background: white;
+  width: 300px;
+  padding: 30px 24px;
+
+  .loan-slider__slider{
+    .loan-slider__slider__header{
+      display: flex;
+      justify-content: space-between;
+      span{
+        font-size: 16px;
+        font-weight: 700;
+      }
+      p{
+        font-size: 20px;
+        font-weight: 700;
+        color: $color-one;
+      }
+    }
+    .loan-slider__slider__slider{
+      mat-slider{
+        width: 100%;
+
+      }
+    }
+    .loan-slider__slider__footer{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 8px;
+      p{
+        font-size: 16px;
+        color: #6D7278;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  hr{
+    margin: 20px 0;
+  }
+  .loan-slider__footer{
+    .loan-slider__footer__content{
+      text-align: center;
+      margin: auto;
+      span{
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      p{
+        font: 16px;
+        color: #6D7278;
+        margin-bottom: 15px;
+      }
+    }
+    .loan-slider__footer__amount{
+      margin: auto;
+      text-align: center;
+      margin-bottom: 40px;
+      span{
+        font-size: 34px;
+        font-weight: 700;
+        color: $color-one;
+      }
+    }
+    .loan-slider__footer__button{
+      text-align: center;
+      button{
+        width: 100%;
+        color: white;
+        background-color: $color-one;
+        font-weight: 700;
+      }
+    }
+  }
+}
