@@ -1,0 +1,39 @@
+<div class="service-area">
+  <div class="service-area__container">
+    <app-navbar-loan [title]="title"></app-navbar-loan>
+    <div class="service-area__container__body">
+      <img src="../../../../assets/logos/service-area.svg" alt="" />
+      <div class="service-area__container__body__text">
+        <p>Pilih area tempat tinggal Anda di bawah ini!</p>
+      </div>
+      <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="radio-button-group"
+        [(ngModel)]="pickedArea"
+      >
+        <mat-radio-button
+          class="radio-button"
+          value="inside"
+        >
+          <div class="label-radio-button">
+            <p>
+              <span *ngFor="let area of serviceArea">
+                <span><strong>{{area.island}}: </strong></span>
+                {{area.city}}
+                <br>
+              </span>
+            </p>
+          </div>
+        </mat-radio-button>
+        <mat-radio-button
+          class="example-radio-button"
+          value="outside"
+          class="radio-button"
+        >
+          <p>Di kota lainnya</p>
+        </mat-radio-button>
+      </mat-radio-group>
+      <button mat-raised-button (click)="handleNext()">Lanjutkan</button>
+    </div>
+  </div>
+</div>

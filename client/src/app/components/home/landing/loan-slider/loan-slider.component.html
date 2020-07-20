@@ -2,10 +2,10 @@
   <div class="loan-slider__slider">
     <div class="loan-slider__slider__header">
       <span>Jumlah Pinjaman</span>
-      <p>X juta</p>
+      <p>{{amount}} juta</p>
     </div>
     <div class="loan-slider__slider__slider">
-      <mat-slider min="2000000" max="20000000" step="1000000"></mat-slider>
+      <mat-slider min="2" max="20" step="1" [(ngModel)]="amount" (change)="onChangeAmount($event)"></mat-slider>
     </div>
     <div class="loan-slider__slider__footer">
       <p>2 juta</p>
@@ -15,10 +15,10 @@
   <div class="loan-slider__slider">
     <div class="loan-slider__slider__header">
       <span>Lama Pinjaman</span>
-      <p>X bulan</p>
+      <p>{{duration}} bulan</p>
     </div>
     <div class="loan-slider__slider__slider">
-      <mat-slider min="6" max="20" step="1"></mat-slider>
+      <mat-slider min="6" max="20" step="1" [(ngModel)]="duration" (change)="onChangeDuration($event)"></mat-slider>
     </div>
     <div class="loan-slider__slider__footer">
       <p>6 bulan</p>
@@ -32,10 +32,10 @@
       <p>*sudah termasuk bunga dan biaya admin</p>
     </div>
     <div class="loan-slider__footer__amount">
-      <span>Rp xxx.xxx</span>
+      <span>{{cicilan | currency:"IDR":"symbol-narrow":"3.0"}}</span>
     </div>
     <div class="loan-slider__footer__button">
-      <button mat-raised-button>Ajukan Pinjaman</button>
+      <button routerLink="/loan/confirm-service-area" mat-raised-button>Ajukan Pinjaman</button>
     </div>
   </div>
 </div>

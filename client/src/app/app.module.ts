@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {MatButtonModule} from '@angular/material/button';
-import {MatSliderModule, MatSlider} from '@angular/material/slider'
+import {MatSliderModule} from '@angular/material/slider';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,13 @@ import { LandingComponent } from './components/home/landing/landing.component';
 import { StatisticComponent } from './components/home/statistic/statistic.component';
 import { LoanSliderComponent } from './components/home/landing/loan-slider/loan-slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import {MycurrencyPipe} from './custom.currencypipe';
+import { ServiceAreaComponent } from './pages/loan/service-area/service-area.component';
+import { ApplicationFormComponent } from './pages/loan/application-form/application-form.component';
+import { NavbarLoanComponent } from './components/loan/navbar-loan/navbar-loan.component';
+import { SummaryComponent } from './pages/loan/summary/summary.component';
+
 
 @NgModule({
   declarations: [
@@ -23,13 +32,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LandingComponent,
     StatisticComponent,
     LoanSliderComponent,
+    MycurrencyPipe,
+    ServiceAreaComponent,
+    ApplicationFormComponent,
+    NavbarLoanComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
