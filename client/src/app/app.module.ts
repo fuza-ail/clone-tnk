@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatRadioModule} from '@angular/material/radio';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,7 @@ import { ServiceAreaComponent } from './pages/loan/service-area/service-area.com
 import { ApplicationFormComponent } from './pages/loan/application-form/application-form.component';
 import { NavbarLoanComponent } from './components/loan/navbar-loan/navbar-loan.component';
 import { SummaryComponent } from './pages/loan/summary/summary.component';
+import { OutsideAreaComponent } from './pages/loan/outside-area/outside-area.component';
 
 
 @NgModule({
@@ -36,7 +39,8 @@ import { SummaryComponent } from './pages/loan/summary/summary.component';
     ServiceAreaComponent,
     ApplicationFormComponent,
     NavbarLoanComponent,
-    SummaryComponent
+    SummaryComponent,
+    OutsideAreaComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,10 @@ import { SummaryComponent } from './pages/loan/summary/summary.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatSliderModule,
-    MatRadioModule
+    MatRadioModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

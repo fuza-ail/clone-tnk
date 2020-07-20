@@ -1,1 +1,46 @@
-<p>application-form works!</p>
+<div class="application-form">
+  <app-navbar-loan [title]="'Ajukan Pinjaman'"></app-navbar-loan>
+  <div class="application-form__body">
+    <div class="application-form__body__detail">
+      <div class="detail__amount">
+        <div class="detail__amount__total">
+          <span>Total Pinjaman</span>
+          <p>Rp X juta</p>
+        </div>
+      </div>
+      <div class="detail__payement">
+        <div class="detail__payement__monthly">
+          <span>Cicilan per Bulan</span>
+          <p>Rp xxx.xxx</p>
+        </div>
+        <div class="detail__payement__duration">
+          <span>Lama cicilan</span>
+          <p>X Bulan</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <form>
+      <mat-form-field class="detail-form" appearance="outline">
+        <mat-label>Nama Sesuai KTP*</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="detail-form" appearance="outline">
+        <mat-label>Nomor KTP (NIK)*</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+      <mat-form-field class="detail-form" appearance="outline" >
+        <mat-label>Nomor Handphone*</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+      <mat-form-field class="detail-form" appearance="outline" >
+        <mat-label>Dari mana Anda mengetahui Tunaiku?*</mat-label>
+        <mat-select>
+          <mat-option value="one">one</mat-option>
+          <mat-option value="two">two</mat-option>
+          <mat-option value="three">three</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </div>
+</div>

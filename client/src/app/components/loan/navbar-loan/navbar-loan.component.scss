@@ -1,7 +1,9 @@
 .navbar-loan{
   position: sticky;
+  background: white;
   top: 0;
   box-shadow: 00px 2px 5px 1px rgb(207, 207, 207);
+  z-index: 99;
   height: 62px;
   display: flex;
   align-items: center;

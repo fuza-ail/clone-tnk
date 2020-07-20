@@ -33,7 +33,7 @@
           <p>Di kota lainnya</p>
         </mat-radio-button>
       </mat-radio-group>
-      <button mat-raised-button (click)="handleNext()">Lanjutkan</button>
+      <button mat-raised-button [disabled]="pickedArea?false:true" (click)="handleNext()">Lanjutkan</button>
     </div>
   </div>
 </div>

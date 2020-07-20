@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceArea} from '../../../models/service-area.model'
 import {SERVICE_AREA} from '../../../data/service-area'
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-service-area',
@@ -12,7 +13,7 @@ export class ServiceAreaComponent implements OnInit {
   pickedArea:string
   serviceArea: ServiceArea[]
 
-  constructor() { }
+  constructor(private route:ActivatedRoute, private router:Router){ }
 
   ngOnInit(): void {
     this.serviceArea = SERVICE_AREA
@@ -20,9 +21,9 @@ export class ServiceAreaComponent implements OnInit {
 
   handleNext(){
     if(this.pickedArea == 'inside'){
-      alert('inside')
+      this.router.navigate(['/loan/application-form'])
     }else{
-      alert('outside')
+      this.router.navigate(['/loan/outside-service-area'])
     }
   }
 }
