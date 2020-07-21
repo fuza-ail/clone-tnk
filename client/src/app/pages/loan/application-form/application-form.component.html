@@ -19,28 +19,58 @@
         </div>
       </div>
     </div>
-    <hr>
-    <form>
+    <hr />
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
       <mat-form-field class="detail-form" appearance="outline">
-        <mat-label>Nama Sesuai KTP*</mat-label>
-        <input matInput>
+        <mat-label>Nama Sesuai KTP</mat-label>
+        <input
+          matInput
+          type="text"
+          name="name"
+          ngModel
+          required />
       </mat-form-field>
       <mat-form-field class="detail-form" appearance="outline">
-        <mat-label>Nomor KTP (NIK)*</mat-label>
-        <input matInput type="number">
+        <mat-label>Nomor KTP (NIK)</mat-label>
+        <input
+          matInput
+          type="number"
+          name="ktp"
+          required
+          ngModel />
       </mat-form-field>
-      <mat-form-field class="detail-form" appearance="outline" >
-        <mat-label>Nomor Handphone*</mat-label>
-        <input matInput type="number">
+      <mat-form-field class="detail-form" appearance="outline">
+        <mat-label>Nomor Handphone</mat-label>
+        <input
+          matInput
+          type="number"
+          name="phone"
+          required
+          ngModel />
       </mat-form-field>
-      <mat-form-field class="detail-form" appearance="outline" >
+      <mat-form-field class="detail-form" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          name="email"
+          email
+          required
+          ngModel />
+      </mat-form-field>
+      <mat-form-field class="detail-form" appearance="outline">
         <mat-label>Dari mana Anda mengetahui Tunaiku?*</mat-label>
-        <mat-select>
-          <mat-option value="one">one</mat-option>
-          <mat-option value="two">two</mat-option>
-          <mat-option value="three">three</mat-option>
+        <mat-select
+          name="source"
+          required
+          ngModel>
+          <mat-option value="internet">Internet</mat-option>
+          <mat-option value="teman">Teman</mat-option>
+          <mat-option value="lain">Lainnya</mat-option>
         </mat-select>
       </mat-form-field>
+
+      <button mat-raised-button type="submit" [disabled]="!f.valid">LANJUTKAN</button>
     </form>
   </div>
 </div>

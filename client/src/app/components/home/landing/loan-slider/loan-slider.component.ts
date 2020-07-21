@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoanService} from '../../../../services/loan.service'
 
 @Component({
   selector: 'app-loan-slider',
@@ -6,20 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loan-slider.component.scss']
 })
 export class LoanSliderComponent implements OnInit {
-  amount:number =2
-  duration:number=6
-  cicilan:number= Math.round(this.amount*1.4*1000000/this.duration)
+  amount:number= this.loanService.amount
+  duration:number = this.loanService.duration
+  installment:number = this.loanService.installment
 
-  constructor() { }
+  constructor(private loanService:LoanService) { }
 
   ngOnInit(): void {
+
   }
 
   onChangeAmount(event):void{
-    this.cicilan = Math.round(event.value*1000000*1.4/this.duration)
+    console.log(event)
+    this.loanService.setAmount(event.value)
+    this.setInstallment()
   }
 
   onChangeDuration(event):void{
-    this.cicilan = Math.round(this.amount*1000000*1.4/event.value)
+    this.loanService.setDuration(event.value)
+    this.setInstallment()
+  }
+  setInstallment(){
+    this.installment = Math.round(this.amount*1.4*1000000/this.duration)
   }
 }
