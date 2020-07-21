@@ -78,3 +78,18 @@
     }
   }
 }
+::ng-deep .mat-slider-track-wrapper{
+  // background: red;
+  height: 5px !important;
+}
+::ng-deep .mat-slider-track-background{
+  height: 100% !important;
+}
+::ng-deep .mat-slider-track-fill{
+  height: 100% !important;
+  background: $color-one !important;
+}
+::ng-deep .mat-slider-thumb{
+  border: 2px solid $color-one !important;
+  background: white !important;
+}

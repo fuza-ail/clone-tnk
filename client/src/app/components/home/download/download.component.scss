@@ -1,0 +1,38 @@
+.download {
+  max-width: 1140px;
+  padding: 30px 15px;
+  margin: auto;
+  .download-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0;
+    .download__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .download__content__head{
+        padding:7.5px ;
+        p{
+          font-size: 22px;
+          line-height: 33px;
+          font-weight: 400;
+        }
+      }
+      .download__content__body{
+        padding: 7.5px;
+        p{
+          font-size: 17px;
+          line-height: 25px;
+        }
+      }
+      .download__content__foot{
+        padding: 7.5px;
+        img{
+          margin: 7.5px;
+        }
+      }
+    }
+  }
+
+}
