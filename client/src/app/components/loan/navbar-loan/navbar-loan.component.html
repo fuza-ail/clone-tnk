@@ -1,3 +1,8 @@
 <div class="navbar-loan">
+  <div class="navbar-loan__icon" *ngIf="type">
+    <mat-icon *ngIf="type==='area'" routerLink="/">keyboard_backspace</mat-icon>
+    <mat-icon *ngIf="type==='form'" routerLink="/loan/confirm-service-area">keyboard_backspace</mat-icon>
+    <mat-icon *ngIf="type==='summary'" routerLink="/loan/application-form">keyboard_backspace</mat-icon>
+  </div>
   <p>{{title}}</p>
 </div>

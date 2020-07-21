@@ -1,0 +1,54 @@
+@import '../../../app.component.scss';
+
+.summary{
+  .summary__content{
+    padding: 20px;
+
+    .summary__content__head{
+      text-align: center;
+      padding-bottom: 40px ;
+      p{
+        font-size: 24px;
+      }
+    }
+    hr{
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .summary__content__body{
+    .content__body__data{
+      display: flex;
+      justify-content: space-between;
+      span{
+        color: rgb(163, 162, 162);
+      }
+      p{
+        font-weight: 600;
+      }
+    }
+  }
+  .summary__content__submition{
+    margin-top: 50px;
+    span{
+      color: grey;
+    }
+
+    button{
+      width: 100%;
+      height: 50px;
+      margin-top: 20px;
+      color: white;
+      background: $color-one;
+    }
+    button:hover{
+      opacity: 0.8;
+    }
+  }
+}
+
+::ng-deep .mat-checkbox-label{
+  white-space: normal;
+  align-items: end;
+  color: grey;
+}

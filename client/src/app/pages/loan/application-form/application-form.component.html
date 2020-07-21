@@ -1,21 +1,21 @@
 <div class="application-form">
-  <app-navbar-loan [title]="'Ajukan Pinjaman'"></app-navbar-loan>
+  <app-navbar-loan [title]="'Ajukan Pinjaman'" [type]="'form'"></app-navbar-loan>
   <div class="application-form__body">
     <div class="application-form__body__detail">
       <div class="detail__amount">
         <div class="detail__amount__total">
           <span>Total Pinjaman</span>
-          <p>Rp X juta</p>
+          <p>Rp {{amount}} juta</p>
         </div>
       </div>
       <div class="detail__payement">
         <div class="detail__payement__monthly">
           <span>Cicilan per Bulan</span>
-          <p>Rp xxx.xxx</p>
+          <p>{{installment | currency:"IDR":"symbol-narrow":"1.0"}}</p>
         </div>
         <div class="detail__payement__duration">
           <span>Lama cicilan</span>
-          <p>X Bulan</p>
+          <p>{{duration}} Bulan</p>
         </div>
       </div>
     </div>
