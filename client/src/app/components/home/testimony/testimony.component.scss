@@ -1,0 +1,18 @@
+.testimony{
+  text-align: center;
+  padding: 30px 15px;
+  h2{
+    font-size: 22px;
+    color: #25282B;
+    font-weight: 500;
+    margin: 7.5px;
+  }
+  p{
+    color: #3D3D3D;
+    margin-bottom:15px ;
+  }
+  .testimony__body{
+    display: flex;
+    justify-content: center;
+  }
+}

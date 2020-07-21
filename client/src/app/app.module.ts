@@ -28,6 +28,9 @@ import { ApplicationFormComponent } from './pages/loan/application-form/applicat
 import { NavbarLoanComponent } from './components/loan/navbar-loan/navbar-loan.component';
 import { SummaryComponent } from './pages/loan/summary/summary.component';
 import { OutsideAreaComponent } from './pages/loan/outside-area/outside-area.component';
+import { TestimonyComponent } from './components/home/testimony/testimony.component';
+import { DownloadComponent } from './components/home/download/download.component';
+import { TestimonyCardComponent } from './components/home/testimony/testimony-card/testimony-card.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { OutsideAreaComponent } from './pages/loan/outside-area/outside-area.com
     ApplicationFormComponent,
     NavbarLoanComponent,
     SummaryComponent,
-    OutsideAreaComponent
+    OutsideAreaComponent,
+    TestimonyComponent,
+    DownloadComponent,
+    TestimonyCardComponent
   ],
   imports: [
     BrowserModule,

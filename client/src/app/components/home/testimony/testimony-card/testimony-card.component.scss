@@ -1,0 +1,42 @@
+.testimony-card {
+  width: 288px;
+  height: 252px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05), 0 0.5px 1px rgba(0, 0, 0, 0.1);
+  margin-right: 7.5px;
+  margin-bottom: 15px;
+  .testimony-card__container {
+    padding: 15px;
+
+    .testimony-card__detail {
+      display: flex;
+      margin-top: 30px;
+      margin-bottom: 15px;
+
+      .testimony-card__detail--image {
+        img {
+          width: 50px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+      }
+      .testimony-card__detail--text {
+        span {
+          line-height: 24px;
+          color: #6d7278;
+        }
+        p {
+          color: #3d3d3d;
+          font-weight: 700;
+        }
+      }
+    }
+    .testimony-card__testi {
+      margin: 15px 0;
+      text-align: center;
+      p {
+        font-size: 14px;
+        color: #6d7278;
+      }
+    }
+  }
+}

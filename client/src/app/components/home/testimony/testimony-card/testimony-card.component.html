@@ -1,0 +1,17 @@
+<div class="testimony-card">
+  <div class="testimony-card__container">
+    <div class="testimony-card__detail">
+      <div class="testimony-card__detail--image">
+        <img [src]="'../../../../../assets/images/'+user.imgUrl" alt="">
+      </div>
+      <div class="testimony-card__detail--text">
+        <span>{{user.name}}, {{user.age}} tahun</span>
+        <p>{{user.loan  | currency:"IDR":"symbol-narrow":"1.0"}}</p>
+      </div>
+    </div>
+    <hr>
+    <div class="testimony-card__testi">
+      <p>{{user.testi}}</p>
+    </div>
+  </div>
+</div>
