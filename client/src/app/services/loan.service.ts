@@ -12,11 +12,11 @@ export class LoanService {
 
   setAmount(amount:number): void {
     this.amount = amount;
-    this.setInstallment()
+
   }
   setDuration(duration:number): void {
     this.duration = duration;
-    this.setInstallment()
+
   }
   setInstallment():void{
     this.installment = Math.round(this.amount*1.4*1000000/this.duration)

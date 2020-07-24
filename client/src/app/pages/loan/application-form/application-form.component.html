@@ -1,76 +1,8 @@
 <div class="application-form">
   <app-navbar-loan [title]="'Ajukan Pinjaman'" [type]="'form'"></app-navbar-loan>
   <div class="application-form__body">
-    <div class="application-form__body__detail">
-      <div class="detail__amount">
-        <div class="detail__amount__total">
-          <span>Total Pinjaman</span>
-          <p>Rp {{amount}} juta</p>
-        </div>
-      </div>
-      <div class="detail__payement">
-        <div class="detail__payement__monthly">
-          <span>Cicilan per Bulan</span>
-          <p>{{installment | currency:"IDR":"symbol-narrow":"1.0"}}</p>
-        </div>
-        <div class="detail__payement__duration">
-          <span>Lama cicilan</span>
-          <p>{{duration}} Bulan</p>
-        </div>
-      </div>
-    </div>
+    <app-application-detail></app-application-detail>
     <hr />
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-      <mat-form-field class="detail-form" appearance="outline">
-        <mat-label>Nama Sesuai KTP</mat-label>
-        <input
-          matInput
-          type="text"
-          name="name"
-          ngModel
-          required />
-      </mat-form-field>
-      <mat-form-field class="detail-form" appearance="outline">
-        <mat-label>Nomor KTP (NIK)</mat-label>
-        <input
-          matInput
-          type="number"
-          name="ktp"
-          required
-          ngModel />
-      </mat-form-field>
-      <mat-form-field class="detail-form" appearance="outline">
-        <mat-label>Nomor Handphone</mat-label>
-        <input
-          matInput
-          type="number"
-          name="phone"
-          required
-          ngModel />
-      </mat-form-field>
-      <mat-form-field class="detail-form" appearance="outline">
-        <mat-label>Email</mat-label>
-        <input
-          matInput
-          type="email"
-          name="email"
-          email
-          required
-          ngModel />
-      </mat-form-field>
-      <mat-form-field class="detail-form" appearance="outline">
-        <mat-label>Dari mana Anda mengetahui Tunaiku?*</mat-label>
-        <mat-select
-          name="source"
-          required
-          ngModel>
-          <mat-option value="internet">Internet</mat-option>
-          <mat-option value="teman">Teman</mat-option>
-          <mat-option value="lain">Lainnya</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <button mat-raised-button type="submit" [disabled]="!f.valid">LANJUTKAN</button>
-    </form>
+    <app-application-input></app-application-input>
   </div>
 </div>

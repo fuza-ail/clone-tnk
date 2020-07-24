@@ -1,0 +1,51 @@
+<form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+  <span *ngIf="!applicationForm.get('name').valid && applicationForm.get('name').touched" style="color: red;">Please insert valid name</span>
+  <mat-form-field class="detail-form" appearance="outline">
+    <mat-label>Nama Sesuai KTP</mat-label>
+    <input
+      matInput
+      type="text"
+      formControlName="name"
+      />
+  </mat-form-field>
+  <span *ngIf="!applicationForm.get('ktp').valid && applicationForm.get('ktp').touched" style="color: red;">Please insert valid KTP</span>
+  <mat-form-field class="detail-form" appearance="outline">
+    <mat-label>Nomor KTP (NIK)</mat-label>
+    <input
+      matInput
+      type="number"
+      formControlName="ktp"
+      />
+  </mat-form-field>
+  <span *ngIf="!applicationForm.get('phone').valid && applicationForm.get('phone').touched" style="color: red;">Please insert valid phone</span>
+  <mat-form-field class="detail-form" appearance="outline">
+    <mat-label>Nomor Handphone</mat-label>
+    <input
+      matInput
+      type="number"
+      formControlName="phone"
+      />
+  </mat-form-field>
+  <span *ngIf="!applicationForm.get('email').valid && applicationForm.get('email').touched" style="color: red;">Please insert valid email</span>
+  <mat-form-field class="detail-form" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      type="email"
+      formControlName="email"
+      email
+      />
+  </mat-form-field>
+  <mat-form-field class="detail-form" appearance="outline">
+    <mat-label>Dari mana Anda mengetahui Tunaiku?*</mat-label>
+    <mat-select
+      formControlName="source"
+    >
+      <mat-option value="internet">Internet</mat-option>
+      <mat-option value="teman">Teman</mat-option>
+      <mat-option value="lain">Lainnya</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" [disabled]="applicationForm.status=='INVALID'">LANJUTKAN</button>
+</form>

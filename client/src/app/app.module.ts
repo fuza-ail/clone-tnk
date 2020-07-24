@@ -21,7 +21,7 @@ import { LandingComponent } from './components/home/landing/landing.component';
 import { StatisticComponent } from './components/home/statistic/statistic.component';
 import { LoanSliderComponent } from './components/home/landing/loan-slider/loan-slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MycurrencyPipe} from './custom.currencypipe';
 import { ServiceAreaComponent } from './pages/loan/service-area/service-area.component';
 import { ApplicationFormComponent } from './pages/loan/application-form/application-form.component';
@@ -31,6 +31,8 @@ import { OutsideAreaComponent } from './pages/loan/outside-area/outside-area.com
 import { TestimonyComponent } from './components/home/testimony/testimony.component';
 import { DownloadComponent } from './components/home/download/download.component';
 import { TestimonyCardComponent } from './components/home/testimony/testimony-card/testimony-card.component';
+import { ApplicationDetailComponent } from './components/loan/application-detail/application-detail.component';
+import { ApplicationInputComponent } from './components/loan/application-input/application-input.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { TestimonyCardComponent } from './components/home/testimony/testimony-ca
     OutsideAreaComponent,
     TestimonyComponent,
     DownloadComponent,
-    TestimonyCardComponent
+    TestimonyCardComponent,
+    ApplicationDetailComponent,
+    ApplicationInputComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,8 @@ import { TestimonyCardComponent } from './components/home/testimony/testimony-ca
     MatSelectModule,
     MatIconModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

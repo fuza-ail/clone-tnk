@@ -18,7 +18,6 @@ export class LoanSliderComponent implements OnInit {
   }
 
   onChangeAmount(event):void{
-    console.log(event)
     this.loanService.setAmount(event.value)
     this.setInstallment()
   }
@@ -27,7 +26,8 @@ export class LoanSliderComponent implements OnInit {
     this.loanService.setDuration(event.value)
     this.setInstallment()
   }
-  setInstallment(){
-    this.installment = Math.round(this.amount*1.4*1000000/this.duration)
+  setInstallment():void{
+    this.loanService.setInstallment()
+    this.installment = this.loanService.installment
   }
 }

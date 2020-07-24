@@ -1,0 +1,18 @@
+<div class="application-form__body__detail">
+  <div class="detail__amount">
+    <div class="detail__amount__total">
+      <span>Total Pinjaman</span>
+      <p>Rp {{amount}} juta</p>
+    </div>
+  </div>
+  <div class="detail__payement">
+    <div class="detail__payement__monthly">
+      <span>Cicilan per Bulan</span>
+      <p>{{installment | currency:"IDR":"symbol-narrow":"1.0"}}</p>
+    </div>
+    <div class="detail__payement__duration">
+      <span>Lama cicilan</span>
+      <p>{{duration}} Bulan</p>
+    </div>
+  </div>
+</div>
