@@ -39,6 +39,7 @@ export class ApplicationInputComponent implements OnInit {
   }
 
   onSubmit():void{
+    console.log(this.applicationForm)
     this.customerDetailService.customerDetail = {
       name: this.applicationForm.value.name,
       ktp: this.applicationForm.value.ktp,
@@ -46,9 +47,9 @@ export class ApplicationInputComponent implements OnInit {
       email: this.applicationForm.value.email,
       source: this.applicationForm.value.source
     }
-    console.log(this.applicationForm)
+    this.applicationForm.reset()
     // console.log(this.customerDetailService.customerDetail)
-    // this.router.navigate(['/loan/summary'])
+    this.router.navigate(['/loan/summary'])
   }
 
 }
