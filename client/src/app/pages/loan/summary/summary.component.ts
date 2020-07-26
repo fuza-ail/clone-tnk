@@ -3,6 +3,7 @@ import { LoanService } from 'src/app/services/loan.service';
 import { CustomerDetailService } from 'src/app/services/customer-detail.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import {Summary} from '../../../models/summary.model'
 
 @Component({
   selector: 'app-summary',
@@ -11,15 +12,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class SummaryComponent implements OnInit {
   isChecked:boolean
-  data:{
-    name:string,
-    ktp:number,
-    email:string,
-    phone:number,
-    amount:number,
-    duration: number,
-    installment: number
-  }
+  data:Summary
+  
   constructor(private loanService:LoanService,private customerDetailService:CustomerDetailService, private router:Router, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {

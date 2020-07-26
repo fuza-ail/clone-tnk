@@ -3,8 +3,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TestimonyCardComponent } from './testimony-card.component';
 
 describe('TestimonyCardComponent', () => {
-  let component: TestimonyCardComponent;
-  let fixture: ComponentFixture<TestimonyCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -13,13 +11,17 @@ describe('TestimonyCardComponent', () => {
     .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TestimonyCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
   it('should create', () => {
+    let fixture = TestBed.createComponent(TestimonyCardComponent);
+    let component = fixture.componentInstance;
+    component.user={
+      imgUrl: 'image',
+      name: 'name',
+      age: 0,
+      loan: 0,
+      testi: 'testimony'
+    }
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 });

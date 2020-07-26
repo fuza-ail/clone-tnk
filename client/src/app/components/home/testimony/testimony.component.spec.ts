@@ -3,23 +3,22 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TestimonyComponent } from './testimony.component';
 
 describe('TestimonyComponent', () => {
-  let component: TestimonyComponent;
-  let fixture: ComponentFixture<TestimonyComponent>;
+  let component : TestimonyComponent;
+  let fixture : ComponentFixture<TestimonyComponent>
 
-  beforeEach(async(() => {
+  beforeEach(()=>{
     TestBed.configureTestingModule({
-      declarations: [ TestimonyComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations:[TestimonyComponent]
+    }).compileComponents();
+  })
 
-  beforeEach(() => {
+  beforeEach(()=>{
     fixture = TestBed.createComponent(TestimonyComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    component = fixture.debugElement.componentInstance
+    fixture.detectChanges()
+  })
+  
+  it('should create testimonycomponent',()=>{
+    expect(component).toBeTruthy()
+  })
 });
