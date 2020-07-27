@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {By} from '@angular/platform-browser'
 import { NavbarLoanComponent } from './navbar-loan.component';
 
 describe('NavbarLoanComponent', () => {
@@ -22,4 +22,16 @@ describe('NavbarLoanComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render component while ngIf true',()=>{
+    component.type = "true";
+    let el:HTMLElement = fixture.debugElement.nativeElement
+    expect(el.querySelector('.navbar-loan__icon')).toBeDefined()
+  })
+
+  it('should not render navbar icon component',()=>{
+    component.type ='';
+    let el = fixture.debugElement.query(By.css('.navbar-loan__icon'))
+    expect(el).toBe(null)
+  })
 });

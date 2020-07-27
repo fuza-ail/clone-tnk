@@ -29,7 +29,6 @@ export class SummaryComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log('success')
     this.router.navigate(['/'])
     this._snackBar.open('Anda telah berhasil melakukan pengajuan','',{
       duration: 1000,

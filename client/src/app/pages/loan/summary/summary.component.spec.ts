@@ -5,13 +5,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CustomerDetailService } from 'src/app/services/customer-detail.service';
 import { LoanService } from 'src/app/services/loan.service';
+import {Location} from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 describe('SummaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SummaryComponent ],
-      imports:[RouterTestingModule,MatSnackBarModule]
+      imports:[RouterTestingModule,MatSnackBarModule,BrowserAnimationsModule]
     })
     .compileComponents();
   }));
@@ -42,4 +44,19 @@ describe('SummaryComponent', () => {
     fixture.detectChanges();
     expect(loanService.amount).toEqual(component.data.amount);
   })
+
+  it('should content Ringkasan Pengajuan',()=>{
+    let fixture = TestBed.createComponent(SummaryComponent)
+    let compiled: HTMLElement = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('Ringkasan Pengajuan')
+  })
+
+  // it('should navigate after submit',()=>{
+  //   let fixture = TestBed.createComponent(SummaryComponent)
+  //   let component = fixture.debugElement.componentInstance
+  //   component.onSubmit();
+  //   const location:Location = TestBed.inject(Location)
+  //   fixture.detectChanges();
+  //   expect(location.path()).toBe('/')
+  // })
 });

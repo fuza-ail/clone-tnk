@@ -13,7 +13,7 @@ export class ServiceAreaComponent implements OnInit {
   pickedArea:string
   serviceArea: ServiceArea[]
 
-  constructor(private route:ActivatedRoute, private router:Router){ }
+  constructor(private router:Router){ }
 
   ngOnInit(): void {
     this.serviceArea = SERVICE_AREA
