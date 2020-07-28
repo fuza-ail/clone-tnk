@@ -39,7 +39,7 @@ import { ApplicationInputComponent } from './components/loan/application-input/a
   declarations: [
     AppComponent,
     HomeComponent,
-    LoanComponent,
+    // LoanComponent,
     NavbarComponent,
     LandingComponent,
     StatisticComponent,
