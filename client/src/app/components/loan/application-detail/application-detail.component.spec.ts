@@ -12,12 +12,14 @@ describe('ApplicationDetailComponent', () => {
     duration: 333,
     installment: 666
   }
+  const loanServiceSpy = jasmine.createSpyObj('LoanService',['setAmount'])
+  let loanService:LoanService
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ApplicationDetailComponent ],
       imports:[RouterTestingModule],
-      providers: [ { provide: LoanService, useValue: loanServiceData } ],
+      providers: [ { provide: LoanService, useValue: loanServiceSpy } ],
     })
     .compileComponents();
   }));
@@ -26,6 +28,7 @@ describe('ApplicationDetailComponent', () => {
     fixture = TestBed.createComponent(ApplicationDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    loanService = TestBed.inject(LoanService)
   });
 
   it('should create', () => {
@@ -33,7 +36,6 @@ describe('ApplicationDetailComponent', () => {
   });
 
   it('should fill data from service',()=>{
-    let loanService = TestBed.inject(LoanService)
 
     expect(component.amount).toEqual(loanService.amount)
     expect(component.duration).toEqual(loanService.duration)
