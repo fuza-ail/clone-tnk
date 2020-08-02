@@ -18,6 +18,7 @@ export class ApplicationDetailComponent implements OnInit {
     this.amount = this.loanService.amount;
     this.duration = this.loanService.duration;
     this.installment = this.loanService.installment;
+    console.log('============================test')
   }
 
 }
