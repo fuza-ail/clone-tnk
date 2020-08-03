@@ -7,11 +7,11 @@ import { LoanService } from 'src/app/services/loan.service';
 describe('ApplicationDetailComponent', () => {
   let component: ApplicationDetailComponent;
   let fixture: ComponentFixture<ApplicationDetailComponent>;
-  let loanServiceData = {
-    amount: 222,
-    duration: 333,
-    installment: 666
-  }
+  // let loanServiceData = {
+  //   amount: 222,
+  //   duration: 333,
+  //   installment: 666
+  // }
   const loanServiceSpy = jasmine.createSpyObj('LoanService',['setAmount'])
   let loanService:LoanService
 
@@ -35,10 +35,14 @@ describe('ApplicationDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should fill data from service',()=>{
-
+  it('should get amount data from loanservice',()=>{
     expect(component.amount).toEqual(loanService.amount)
+  })
+
+  it('should get duration data from loanservice',()=>{
     expect(component.duration).toEqual(loanService.duration)
+  })
+  it('should get installment data from loanservice',()=>{
     expect(component.installment).toEqual(loanService.installment)
   })
 
