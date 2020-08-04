@@ -10,6 +10,7 @@ export class LoanComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('loan++')
   }
 
 }

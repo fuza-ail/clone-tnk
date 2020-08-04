@@ -57,7 +57,7 @@ import { ApplicationInputComponent } from './components/loan/application-input/a
     ApplicationInputComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
