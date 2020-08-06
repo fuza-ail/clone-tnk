@@ -7,8 +7,8 @@
   width: 300px;
   padding: 30px 24px;
 
-  .loan-slider__slider{
-    .loan-slider__slider__header{
+  &__slider{
+    &__header{
       display: flex;
       justify-content: space-between;
       span{
@@ -21,7 +21,7 @@
         color: $color-one;
       }
     }
-    .loan-slider__slider__slider{
+    &__slider{
       mat-slider{
         width: 100%;
 
