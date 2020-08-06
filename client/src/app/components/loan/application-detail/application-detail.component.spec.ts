@@ -12,6 +12,7 @@ describe('ApplicationDetailComponent', () => {
   //   duration: 333,
   //   installment: 666
   // }
+  let mockDuration:number
   const loanServiceSpy = jasmine.createSpyObj('LoanService',['setAmount'])
   let loanService:LoanService
 
@@ -27,23 +28,40 @@ describe('ApplicationDetailComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ApplicationDetailComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    
     loanService = TestBed.inject(LoanService)
+    
   });
 
+  // after each for clearing
+  afterEach(()=>{
+
+  })
+
   it('should create', () => {
+    console.log(component.amount, loanService.amount)
+
     expect(component).toBeTruthy();
   });
 
   it('should get amount data from loanservice',()=>{
-    expect(component.amount).toEqual(loanService.amount)
+    let mockAmount = 6 // assign mock
+    loanService.amount = mockAmount // act
+    fixture.detectChanges();
+    expect(component.amount).toEqual(mockAmount) // assert
   })
 
   it('should get duration data from loanservice',()=>{
-    expect(component.duration).toEqual(loanService.duration)
+    let mockDuration = 6 // assign mock
+    loanService.duration = mockDuration // act
+    fixture.detectChanges();
+    expect(component.duration).toEqual(mockDuration) // assert
   })
   it('should get installment data from loanservice',()=>{
-    expect(component.installment).toEqual(loanService.installment)
+    let mockInstallment = 6 // assign mock
+    loanService.installment = mockInstallment // act
+    fixture.detectChanges();
+    expect(component.installment).toEqual(mockInstallment) // assert
   })
-
+  
 });

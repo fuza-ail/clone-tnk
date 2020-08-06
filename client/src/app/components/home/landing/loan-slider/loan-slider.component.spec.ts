@@ -8,10 +8,12 @@ describe('LoanSliderComponent', () => {
   let fixture: ComponentFixture<LoanSliderComponent>;
   let loanService:LoanService
   const loanServiceSpy = jasmine.createSpyObj('LoanService',['setAmount','setDuration','setInstallment']);
-  const mockData={
-    amount: 10,
-    duration: 12
+  const mockAmount ={
+    value: 10
   }
+  const  mockDuration = {
+    value: 10
+  } // arrange: assign mock
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -32,25 +34,28 @@ describe('LoanSliderComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should change service value if onChangeAmount is triggered',()=>{
-    // let dummyAmount ={
-    //   value: 20
-    // }
-    // component.onChangeAmount(dummyAmount)
-    // expect(loanService.amount).toEqual(dummyAmount.value)
-    component.onChangeAmount(mockData.amount)
+  it('should call loan service set amount',()=>{
 
-    expect(component.amount).toEqual(loanService.amount)
+    component.onChangeAmount(mockAmount) // act
+
+    //
+    const setAmountSpy = loanService.setAmount as jasmine.Spy
+
+    expect(setAmountSpy).toHaveBeenCalledWith(mockAmount.value) // assert
   })
 
-  it('should change service value if onChangeDuration is triggered',()=>{
-  //   // let dummyDuration ={
-  //   //   value: 6
-  //   // }
-  //   // component.onChangeAmount(dummyDuration)
-  //   // expect(loanService.amount).toEqual(dummyDuration.value)
-    component.onChangeDuration(mockData.duration)
+  it('should call loan service set duration',()=>{
+  
+    component.onChangeDuration(mockDuration)
 
-    expect(component.duration).toEqual(loanService.duration)
+    const setDurationSpy = loanService.setDuration as jasmine.Spy
+
+    expect(setDurationSpy).toHaveBeenCalledWith(mockDuration.value) 
+  })
+
+  it('Should calls loan service set installment',()=>{
+    component.setInstallment()
+    const setInstallmentSpy = loanService.setInstallment as jasmine.Spy
+    expect(setInstallmentSpy).toHaveBeenCalled()
   })
 });
