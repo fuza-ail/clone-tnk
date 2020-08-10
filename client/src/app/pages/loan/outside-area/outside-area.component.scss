@@ -2,15 +2,13 @@
 
 .outside-area {
   position: relative;
-  // top: 64px;
   padding: 0 36px;
-  padding-top: 0;
   height: 100vh;
   
   .outside-area__container {
     padding-top: 40px;
 
-    .outside-area__container__image{
+    .container__image{
       margin-bottom: 30px;
       display: flex;
       justify-content: center;
@@ -21,7 +19,7 @@
       font-weight: 700;
       line-height: 24px;
     }
-    .outside-area__container__body {
+    .container__body {
       p {
         margin-bottom: 15px;
         font-weight: normal;

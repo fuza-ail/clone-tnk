@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceArea} from '../../../models/service-area.model'
 import {SERVICE_AREA} from '../../../data/service-area'
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-service-area',
@@ -13,7 +13,7 @@ export class ServiceAreaComponent implements OnInit {
   pickedArea:string
   serviceArea: ServiceArea[]
 
-  constructor(private route:ActivatedRoute, private router:Router){ }
+  constructor(private router:Router){ }
 
   ngOnInit(): void {
     this.serviceArea = SERVICE_AREA

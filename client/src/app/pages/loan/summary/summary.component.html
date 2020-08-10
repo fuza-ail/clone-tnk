@@ -4,46 +4,46 @@
     [type]="'summary'"
   ></app-navbar-loan>
   <div class="summary__content">
-    <div class="summary__content__head">
+    <div class="content__head">
       <p>Ringkasan Pengajuan</p>
     </div>
-    <div class="summary__content__body">
-      <div class="content__body__data">
+    <div class="content__body">
+      <div class="body--data">
         <span>Nama</span>
         <p>{{data.name}}</p>
       </div>
       <hr>
-      <div class="content__body__data">
+      <div class="body--data">
         <span>Nomor KTP</span>
         <p>{{data.ktp}}</p>
       </div>
       <hr>
-      <div class="content__body__data">
+      <div class="body--data">
         <span>Email</span>
         <p>{{data.email}}</p>
       </div>
       <hr>
-      <div class="content__body__data">
+      <div class="body--data">
         <span>No Telepon</span>
         <p>{{data.phone}}</p>
       </div>
       <hr>
-      <div class="content__body__data">
+      <div class="body--data">
         <span>Jumlah Pinjaman</span>
         <p>{{data.amount}} juta</p>
       </div>
       <hr>
-      <div class="content__body__data">
+      <div class="body--data">
         <span>Lama Cicilan</span>
         <p>{{data.duration}} Bulan</p>
       </div>
       <hr>
-      <div class="content__body__data">
+      <div class="body--data">
         <span>Jumlah Cicilan per Bulan</span>
         <p>{{data.installment | currency:"IDR":"symbol-narrow":"1.0"}}</p>
       </div>
     </div>
-    <div class="summary__content__submition">
+    <div class="content__submition">
       <mat-checkbox [(ngModel)]="isChecked">Saya menyetujui Kebijakan Privasi dan Syarat & Ketentuan dari PT. Bank Amar Indonesia Tbk.</mat-checkbox><br>
       <button [disabled]="!isChecked" mat-raised-button (click)="onSubmit()">SIMPAN & KIRIM PENGAJUAN</button>
     </div>

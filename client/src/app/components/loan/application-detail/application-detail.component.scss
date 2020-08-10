@@ -1,4 +1,4 @@
-.application-form__body__detail {
+.application-form {
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 15px;
@@ -14,22 +14,15 @@
     font-weight: 700;
     line-height: 20px;
   }
-  .detail__amount {
-    height: 64px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-  }
+  .detail__amount,
   .detail__payement {
     height: 64px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-
-    .detail__payement__duration {
-      justify-self: end;
-    }
+  }
+  .payement__duration {
+    justify-self: end;
   }
 }

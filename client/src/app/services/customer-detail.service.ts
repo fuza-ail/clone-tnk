@@ -4,6 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CustomerDetailService {
-  customerDetail:{email:string,ktp:number,name:string,phone:number,source:string}
+  customerDetail:{
+    email:string,
+    ktp:number,
+    name:string,
+    phone:number,
+    source:string
+  }
   constructor() {  }
 }

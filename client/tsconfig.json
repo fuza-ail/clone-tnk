@@ -17,4 +17,9 @@
       "path": "./tsconfig.server.json"
     }
   ],
+  "paths": {
+    "@app/*": [
+      "src/app/*"
+    ]
+  }
 }

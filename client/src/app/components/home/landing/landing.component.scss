@@ -10,7 +10,7 @@
   .landing__text {
     max-width: 554px;
     align-self: center;
-    .landing__text__title {
+    .text__title {
       margin-bottom: 36px;
       h1 {
         line-height: 72px;
@@ -18,7 +18,7 @@
         font-weight: 700px;
       }
     }
-    .landing__text__subtitle {
+    .text__subtitle {
       margin-bottom: 36px;
       p {
         font-size: 20px;
@@ -28,18 +28,18 @@
         }
       }
     }
-    .landing__text__footer {
+    .text__footer {
       margin-top: 270px;
       display: flex;
       align-items: center;
-      .landing__text__footer__text{
+      .footer__text{
         width: 270px;
         p{
           margin-bottom: 15px;
           font-size: 12px;
         }
       }
-      .landing__text__footer__logo{
+      .footer__logo{
         display: flex;
         img{
           margin:0 20px;

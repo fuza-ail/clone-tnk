@@ -7,20 +7,25 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
-  styleUrls: ['./summary.component.scss']
+  styleUrls: ['./summary.component.scss'],
 })
 export class SummaryComponent implements OnInit {
-  isChecked:boolean
-  data:{
-    name:string,
-    ktp:number,
-    email:string,
-    phone:number,
-    amount:number,
-    duration: number,
-    installment: number
-  }
-  constructor(private loanService:LoanService,private customerDetailService:CustomerDetailService, private router:Router, private _snackBar: MatSnackBar) { }
+  isChecked: boolean;
+  data: {
+    name: string;
+    ktp: number;
+    email: string;
+    phone: number;
+    amount: number;
+    duration: number;
+    installment: number;
+  };
+  constructor(
+    private loanService: LoanService,
+    private customerDetailService: CustomerDetailService,
+    private router: Router,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.data = {
@@ -30,17 +35,17 @@ export class SummaryComponent implements OnInit {
       phone: this.customerDetailService.customerDetail.phone,
       amount: this.loanService.amount,
       duration: this.loanService.duration,
-      installment: this.loanService.installment
-    }
+      installment: this.loanService.installment,
+    };
   }
 
-  onSubmit(){
-    console.log('success')
-    this.router.navigate(['/'])
-    this._snackBar.open('Anda telah berhasil melakukan pengajuan','',{
+  onSubmit() {
+    console.log('success');
+    this.router.navigate(['/']);
+    this._snackBar.open('Anda telah berhasil melakukan pengajuan', '', {
       duration: 1000,
-      horizontalPosition:'center',
-      verticalPosition:'top'
-    })
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+    });
   }
 }
